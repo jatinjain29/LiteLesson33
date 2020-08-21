@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TeacherDashboard</string>
+    <string-array name="classes">
+        <item>"Select Class..."</item>
+        <item>"Class 10"</item>
+        <item>"Class 3"</item>
+    </string-array>
+</resources>

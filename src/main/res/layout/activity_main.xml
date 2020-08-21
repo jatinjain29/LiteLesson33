@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundBlue"
+
+    >
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/cl"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/BackgroundBlue"
+        android:orientation="vertical">
+
+
+        <ImageView
+        android:id="@+id/ivCreateClass"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/startclass"
+        app:layout_constraintBottom_toTopOf="@id/btnStrtClass"
+            app:layout_constraintTop_toTopOf="@id/cl"
+        app:layout_constraintEnd_toStartOf="@+id/ivClassSchedule"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <ImageView
+        android:id="@+id/ivClassSchedule"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/schedule"
+app:layout_constraintTop_toTopOf="@id/cl"
+        app:layout_constraintBottom_toTopOf="@id/btnClassSchd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivCreateClass"
+         />
+
+
+    <Button
+        android:id="@+id/btnStrtClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.3"
+        android:background="@drawable/customize_button"
+        android:padding="2dp"
+        android:onClick="Strtcls"
+        android:text="START CLASS"
+        android:textSize="19dp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnClassSchd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCreateClass" />
+
+    <Button
+        android:id="@+id/btnClassSchd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+
+        android:gravity="center"
+        android:background="@drawable/customize_button"
+        android:padding="2dp"
+        android:onClick="ClsSchd"
+        android:text="CLASS SCHEDULE"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnStrtClass"
+        app:layout_constraintTop_toBottomOf="@+id/ivClassSchedule" />
+
+
+    <ImageView
+        android:id="@+id/ivCrtAssing"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.3"
+        android:src="@mipmap/createassing"
+        app:layout_constraintBottom_toTopOf="@+id/btnCrtAssing"
+        app:layout_constraintEnd_toStartOf="@+id/ivVwAssing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStrtClass" />
+
+    <ImageView
+        android:id="@+id/ivVwAssing"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="0.3"
+        android:src="@mipmap/viewassing"
+
+        app:layout_constraintBottom_toTopOf="@id/btnVwAssing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivCrtAssing"
+        app:layout_constraintTop_toBottomOf="@+id/btnClassSchd" />
+
+    <Button
+        android:id="@+id/btnCrtAssing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.3"
+        android:background="@drawable/customize_button"
+        android:padding="2dp"
+        android:gravity="center"
+        android:onClick="CrtAsng"
+        android:text="CREATE ASSINGMENT"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/btnVwAssing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCrtAssing" />
+
+    <Button
+        android:id="@+id/btnVwAssing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:background="@drawable/customize_button"
+        android:padding="2dp"
+        android:gravity="center"
+        android:onClick="VwAsng"
+        android:text="VIEW ASSINGMENT"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCrtAssing"
+        app:layout_constraintTop_toBottomOf="@+id/ivVwAssing" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

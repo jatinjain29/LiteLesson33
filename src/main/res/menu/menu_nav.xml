@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Dashboard"
+            android:icon="@drawable/dashboard_foreground"
+            android:id="@+id/activity_dashboard"
+            />
+    <item
+        android:title="Start Class"
+        android:icon="@drawable/startclass_foreground"
+        android:id="@+id/activity_startclass"/>
+    <item
+        android:title="Class Schedule"
+        android:icon="@drawable/schedule_foreground"
+        android:id="@+id/activity_classSchedule"/>
+    <item
+        android:title="Create Assingment"
+        android:icon="@drawable/createassing_foreground"
+        android:id="@+id/activity_Cassingment"/>
+    <item
+        android:title="View Assingment"
+        android:icon="@drawable/viewassing_foreground"
+        android:id="@+id/activty_Vassingment"/>
+    </group>
+
+</menu>

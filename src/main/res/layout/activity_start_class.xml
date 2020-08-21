@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".StartClass"
+    android:orientation="vertical"
+    android:padding="30dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:textStyle="bold"
+        android:text="ONLINE CLASSES"
+        android:textSize="35dp"
+        android:background="@drawable/customize_button"
+        android:gravity="center"
+        android:textColor="#080808"
+        android:layout_marginTop="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvOnlCls"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:popupBackground="@color/BackgroundBlue"
+        android:background="@drawable/custom_edittext"
+android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        app:layout_constraintTop_toTopOf="@+id/tvOnlCls"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="CREATE LIVE CLASS"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/BackgroundBlue"
+        android:textSize="23dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
