@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,155 +7,202 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
+    android:padding="6dp"
+    android:background="#303030"
     >
-
-<androidx.constraintlayout.widget.ConstraintLayout
+<TextView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/BackgroundBlue"
-
-    >
-
-
-
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_marginTop="70dp"
+    android:text="Name:"
+    android:textSize="24dp"
+    android:id="@+id/tname"
+    android:fontFamily="@font/alegreya"
+    android:textColor="#FFFFFF"
+    android:paddingLeft="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:textAllCaps="true"/>
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/cl"
-        android:padding="20dp"
-        android:layout_marginTop="10dp"
         android:background="@color/BackgroundBlue"
-        android:orientation="vertical">
-
-
-        <ImageView
-        android:id="@+id/ivCreateClass"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:src="@mipmap/startclass"
-        app:layout_constraintBottom_toTopOf="@id/btnStrtClass"
-            app:layout_constraintTop_toTopOf="@id/cl"
-        app:layout_constraintEnd_toStartOf="@+id/ivClassSchedule"
-        app:layout_constraintStart_toStartOf="parent"
-
+        android:layout_marginTop="8dp"
+        android:textSize="24dp"
+        android:id="@+id/tsubj"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/alegreya"
+        android:text="Subject:"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginRight="10dp"
         />
 
-    <ImageView
-        android:id="@+id/ivClassSchedule"
-        android:layout_width="0dp"
+
+
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303030">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl"
+        android:layout_marginTop="40dp"
+        android:background="#303030"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:background="#424242"
+        android:orientation="vertical"
+        >
+        <ImageView
+        android:id="@+id/ivCreateClass"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginTop="30dp"
-        android:src="@mipmap/schedule"
-app:layout_constraintTop_toTopOf="@id/cl"
-        app:layout_constraintBottom_toTopOf="@id/btnClassSchd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivCreateClass"
-         />
+            android:src="@mipmap/startclassm"
+            />
+        <Button
+            android:id="@+id/btnStrtClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5A5A5C"
+            android:textColor="#FFFFFF"
+            android:onClick="Strtcls"
+            android:text="START CLASS"
+            android:textSize="19dp"
+            android:textStyle="bold"
+             />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
 
-
-    <Button
-        android:id="@+id/btnStrtClass"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:layout_weight="0.3"
-        android:background="@drawable/customize_button"
-        android:padding="2dp"
-        android:onClick="Strtcls"
-        android:text="START CLASS"
-        android:textSize="19dp"
-
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/btnClassSchd"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivCreateClass" />
-
-    <Button
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="6dp"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#424242"
+            android:layout_gravity="center_horizontal">
+        <ImageView
+        android:id="@+id/ivClassSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@mipmap/clasm"
+        />
+            <Button
         android:id="@+id/btnClassSchd"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.3"
-
-        android:gravity="center"
-        android:background="@drawable/customize_button"
-        android:padding="2dp"
+                android:gravity="center"
+        android:background="#5A5A5C"
+        android:textColor="#FFFFFF"
         android:onClick="ClsSchd"
         android:text="CLASS SCHEDULE"
         android:textSize="19dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnStrtClass"
-        app:layout_constraintTop_toBottomOf="@+id/ivClassSchedule" />
+         />
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="6dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#424242"
+        android:layout_gravity="center_horizontal">
     <ImageView
         android:id="@+id/ivCrtAssing"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_weight="0.3"
-        android:src="@mipmap/createassing"
-        app:layout_constraintBottom_toTopOf="@+id/btnCrtAssing"
-        app:layout_constraintEnd_toStartOf="@+id/ivVwAssing"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnStrtClass" />
+        android:src="@mipmap/createassingm"
+         />
+        <Button
+            android:id="@+id/btnCrtAssing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5A5A5C"
+            android:gravity="center"
+            android:onClick="CrtAsng"
+            android:textColor="#FFFFFF"
+            android:text="CREATE ASSINGMENT"
+            android:textSize="19dp"
+            android:textStyle="bold"
+ />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-    <ImageView
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="6dp"
+        android:layout_marginBottom="50dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#424242"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <ImageView
         android:id="@+id/ivVwAssing"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginTop="30dp"
-        android:layout_weight="0.3"
-        android:src="@mipmap/viewassing"
+        android:src="@mipmap/viewassingm"
+        />
 
-        app:layout_constraintBottom_toTopOf="@id/btnVwAssing"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivCrtAssing"
-        app:layout_constraintTop_toBottomOf="@+id/btnClassSchd" />
-
-    <Button
-        android:id="@+id/btnCrtAssing"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:layout_weight="0.3"
-        android:background="@drawable/customize_button"
-        android:padding="2dp"
-        android:gravity="center"
-        android:onClick="CrtAsng"
-        android:text="CREATE ASSINGMENT"
-        android:textSize="19dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/btnVwAssing"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivCrtAssing" />
-
-    <Button
+        <Button
         android:id="@+id/btnVwAssing"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.3"
-        android:background="@drawable/customize_button"
-        android:padding="2dp"
+        android:background="#5A5A5C"
+        android:textColor="#FFFFFF"
         android:gravity="center"
         android:onClick="VwAsng"
         android:text="VIEW ASSINGMENT"
         android:textSize="19dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCrtAssing"
-        app:layout_constraintTop_toBottomOf="@+id/ivVwAssing" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+</LinearLayout>
 
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>

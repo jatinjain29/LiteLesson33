@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Custom_toolbar"
-        android:id="@+id/toolbar"/>
+        android:id="@+id/toolbar"
+        />
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation"

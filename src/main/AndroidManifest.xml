@@ -14,7 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Assingment_Submissions"></activity>
+        <activity android:name=".LoginActivy">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UserSettings" />
+        <activity android:name=".Assingment_Submissions" />
         <activity android:name=".BaseNavigation" />
         <activity android:name=".EditAssingment" />
         <activity android:name=".AssingmentDetails" />
@@ -23,11 +31,7 @@
         <activity android:name=".CreateAssingment" />
         <activity android:name=".StartClass" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data

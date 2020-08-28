@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -35,10 +36,11 @@ import java.util.Map;
 
 public class MainActivity extends BaseNavigation {
 
-
+String name,subject;
     public static String token;
     public static ArrayList<String> sclass;
     public static ArrayList<Integer> classid;
+    TextView tname,tsubj;
 
 
     @Override
@@ -48,12 +50,19 @@ public class MainActivity extends BaseNavigation {
         LayoutInflater inflater=LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.activity_main, null, false);
         drawerLayout.addView(view, 0);
+        tname=findViewById(R.id.tname);
+        tsubj=findViewById(R.id.tsubj);
+        Intent intent=getIntent();
+        name=intent.getStringExtra("Name");
+        subject=intent.getStringExtra("Subject");
+        token=intent.getStringExtra("Token");
 
-
+tname.setText("Name: "+name);
+tsubj.setText("Subject: "+subject);
         sclass = new ArrayList<>();
         sclass.add(0, "Select Class...");
         classid = new ArrayList<>();
-        token = "b80cf436f0e33f802233abc81fdffc55a238d443c07d8f62d76b4265345dcb32";
+
 
 
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
@@ -111,6 +120,13 @@ public class MainActivity extends BaseNavigation {
 
     public void VwAsng(View v) {
         startActivity(new Intent(MainActivity.this, ViewAssingment.class));
+    }
+
+
+    @Override
+    public void onBackPressed() {
+       // super.onBackPressed();
+        Toast.makeText(getApplicationContext(),"Press Logout icon to get logged out",Toast.LENGTH_SHORT).show();
     }
 }
 
